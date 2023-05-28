@@ -1,0 +1,596 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D5700A62A23843E00C5EA65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5700A52A23843E00C5EA65 /* AppDelegate.swift */; };
+		2D5700A82A23843E00C5EA65 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2D5700A72A23843E00C5EA65 /* GameScene.sks */; };
+		2D5700AA2A23843E00C5EA65 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2D5700A92A23843E00C5EA65 /* Actions.sks */; };
+		2D5700AC2A23843E00C5EA65 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5700AB2A23843E00C5EA65 /* GameScene.swift */; };
+		2D5700AE2A23843E00C5EA65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5700AD2A23843E00C5EA65 /* ViewController.swift */; };
+		2D5700B02A23844300C5EA65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D5700AF2A23844300C5EA65 /* Assets.xcassets */; };
+		2D5700B32A23844300C5EA65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D5700B12A23844300C5EA65 /* Main.storyboard */; };
+		2D5700BE2A23844300C5EA65 /* ATCSimulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5700BD2A23844300C5EA65 /* ATCSimulatorTests.swift */; };
+		2D5700C82A23844300C5EA65 /* ATCSimulatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5700C72A23844300C5EA65 /* ATCSimulatorUITests.swift */; };
+		2D5700CA2A23844300C5EA65 /* ATCSimulatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5700C92A23844300C5EA65 /* ATCSimulatorUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2D5700BA2A23844300C5EA65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D57009A2A23843E00C5EA65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D5700A12A23843E00C5EA65;
+			remoteInfo = ATCSimulator;
+		};
+		2D5700C42A23844300C5EA65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D57009A2A23843E00C5EA65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D5700A12A23843E00C5EA65;
+			remoteInfo = ATCSimulator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2D5700A22A23843E00C5EA65 /* ATCSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATCSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D5700A52A23843E00C5EA65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2D5700A72A23843E00C5EA65 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		2D5700A92A23843E00C5EA65 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		2D5700AB2A23843E00C5EA65 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		2D5700AD2A23843E00C5EA65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2D5700AF2A23844300C5EA65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2D5700B22A23844300C5EA65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2D5700B42A23844300C5EA65 /* ATCSimulator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ATCSimulator.entitlements; sourceTree = "<group>"; };
+		2D5700B92A23844300C5EA65 /* ATCSimulatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ATCSimulatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D5700BD2A23844300C5EA65 /* ATCSimulatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCSimulatorTests.swift; sourceTree = "<group>"; };
+		2D5700C32A23844300C5EA65 /* ATCSimulatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ATCSimulatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D5700C72A23844300C5EA65 /* ATCSimulatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCSimulatorUITests.swift; sourceTree = "<group>"; };
+		2D5700C92A23844300C5EA65 /* ATCSimulatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCSimulatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D57009F2A23843E00C5EA65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D5700B62A23844300C5EA65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D5700C02A23844300C5EA65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D5700992A23843E00C5EA65 = {
+			isa = PBXGroup;
+			children = (
+				2D5700A42A23843E00C5EA65 /* ATCSimulator */,
+				2D5700BC2A23844300C5EA65 /* ATCSimulatorTests */,
+				2D5700C62A23844300C5EA65 /* ATCSimulatorUITests */,
+				2D5700A32A23843E00C5EA65 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2D5700A32A23843E00C5EA65 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D5700A22A23843E00C5EA65 /* ATCSimulator.app */,
+				2D5700B92A23844300C5EA65 /* ATCSimulatorTests.xctest */,
+				2D5700C32A23844300C5EA65 /* ATCSimulatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D5700A42A23843E00C5EA65 /* ATCSimulator */ = {
+			isa = PBXGroup;
+			children = (
+				2D5700A52A23843E00C5EA65 /* AppDelegate.swift */,
+				2D5700A72A23843E00C5EA65 /* GameScene.sks */,
+				2D5700A92A23843E00C5EA65 /* Actions.sks */,
+				2D5700AB2A23843E00C5EA65 /* GameScene.swift */,
+				2D5700AD2A23843E00C5EA65 /* ViewController.swift */,
+				2D5700AF2A23844300C5EA65 /* Assets.xcassets */,
+				2D5700B12A23844300C5EA65 /* Main.storyboard */,
+				2D5700B42A23844300C5EA65 /* ATCSimulator.entitlements */,
+			);
+			path = ATCSimulator;
+			sourceTree = "<group>";
+		};
+		2D5700BC2A23844300C5EA65 /* ATCSimulatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				2D5700BD2A23844300C5EA65 /* ATCSimulatorTests.swift */,
+			);
+			path = ATCSimulatorTests;
+			sourceTree = "<group>";
+		};
+		2D5700C62A23844300C5EA65 /* ATCSimulatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2D5700C72A23844300C5EA65 /* ATCSimulatorUITests.swift */,
+				2D5700C92A23844300C5EA65 /* ATCSimulatorUITestsLaunchTests.swift */,
+			);
+			path = ATCSimulatorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2D5700A12A23843E00C5EA65 /* ATCSimulator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D5700CD2A23844300C5EA65 /* Build configuration list for PBXNativeTarget "ATCSimulator" */;
+			buildPhases = (
+				2D57009E2A23843E00C5EA65 /* Sources */,
+				2D57009F2A23843E00C5EA65 /* Frameworks */,
+				2D5700A02A23843E00C5EA65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ATCSimulator;
+			productName = ATCSimulator;
+			productReference = 2D5700A22A23843E00C5EA65 /* ATCSimulator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2D5700B82A23844300C5EA65 /* ATCSimulatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D5700D02A23844300C5EA65 /* Build configuration list for PBXNativeTarget "ATCSimulatorTests" */;
+			buildPhases = (
+				2D5700B52A23844300C5EA65 /* Sources */,
+				2D5700B62A23844300C5EA65 /* Frameworks */,
+				2D5700B72A23844300C5EA65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D5700BB2A23844300C5EA65 /* PBXTargetDependency */,
+			);
+			name = ATCSimulatorTests;
+			productName = ATCSimulatorTests;
+			productReference = 2D5700B92A23844300C5EA65 /* ATCSimulatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2D5700C22A23844300C5EA65 /* ATCSimulatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D5700D32A23844300C5EA65 /* Build configuration list for PBXNativeTarget "ATCSimulatorUITests" */;
+			buildPhases = (
+				2D5700BF2A23844300C5EA65 /* Sources */,
+				2D5700C02A23844300C5EA65 /* Frameworks */,
+				2D5700C12A23844300C5EA65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D5700C52A23844300C5EA65 /* PBXTargetDependency */,
+			);
+			name = ATCSimulatorUITests;
+			productName = ATCSimulatorUITests;
+			productReference = 2D5700C32A23844300C5EA65 /* ATCSimulatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D57009A2A23843E00C5EA65 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					2D5700A12A23843E00C5EA65 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					2D5700B82A23844300C5EA65 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 2D5700A12A23843E00C5EA65;
+					};
+					2D5700C22A23844300C5EA65 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 2D5700A12A23843E00C5EA65;
+					};
+				};
+			};
+			buildConfigurationList = 2D57009D2A23843E00C5EA65 /* Build configuration list for PBXProject "ATCSimulator" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2D5700992A23843E00C5EA65;
+			productRefGroup = 2D5700A32A23843E00C5EA65 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D5700A12A23843E00C5EA65 /* ATCSimulator */,
+				2D5700B82A23844300C5EA65 /* ATCSimulatorTests */,
+				2D5700C22A23844300C5EA65 /* ATCSimulatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2D5700A02A23843E00C5EA65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D5700A82A23843E00C5EA65 /* GameScene.sks in Resources */,
+				2D5700B02A23844300C5EA65 /* Assets.xcassets in Resources */,
+				2D5700AA2A23843E00C5EA65 /* Actions.sks in Resources */,
+				2D5700B32A23844300C5EA65 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D5700B72A23844300C5EA65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D5700C12A23844300C5EA65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D57009E2A23843E00C5EA65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D5700AE2A23843E00C5EA65 /* ViewController.swift in Sources */,
+				2D5700AC2A23843E00C5EA65 /* GameScene.swift in Sources */,
+				2D5700A62A23843E00C5EA65 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D5700B52A23844300C5EA65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D5700BE2A23844300C5EA65 /* ATCSimulatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D5700BF2A23844300C5EA65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D5700CA2A23844300C5EA65 /* ATCSimulatorUITestsLaunchTests.swift in Sources */,
+				2D5700C82A23844300C5EA65 /* ATCSimulatorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2D5700BB2A23844300C5EA65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D5700A12A23843E00C5EA65 /* ATCSimulator */;
+			targetProxy = 2D5700BA2A23844300C5EA65 /* PBXContainerItemProxy */;
+		};
+		2D5700C52A23844300C5EA65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D5700A12A23843E00C5EA65 /* ATCSimulator */;
+			targetProxy = 2D5700C42A23844300C5EA65 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2D5700B12A23844300C5EA65 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D5700B22A23844300C5EA65 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2D5700CB2A23844300C5EA65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2D5700CC2A23844300C5EA65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		2D5700CE2A23844300C5EA65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ATCSimulator/ATCSimulator.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7XCQ4MW7YV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FutawatariKazuki.ATCSimulator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2D5700CF2A23844300C5EA65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ATCSimulator/ATCSimulator.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7XCQ4MW7YV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FutawatariKazuki.ATCSimulator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		2D5700D12A23844300C5EA65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7XCQ4MW7YV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FutawatariKazuki.ATCSimulatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ATCSimulator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ATCSimulator";
+			};
+			name = Debug;
+		};
+		2D5700D22A23844300C5EA65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7XCQ4MW7YV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FutawatariKazuki.ATCSimulatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ATCSimulator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ATCSimulator";
+			};
+			name = Release;
+		};
+		2D5700D42A23844300C5EA65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7XCQ4MW7YV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FutawatariKazuki.ATCSimulatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = ATCSimulator;
+			};
+			name = Debug;
+		};
+		2D5700D52A23844300C5EA65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7XCQ4MW7YV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FutawatariKazuki.ATCSimulatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = ATCSimulator;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D57009D2A23843E00C5EA65 /* Build configuration list for PBXProject "ATCSimulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D5700CB2A23844300C5EA65 /* Debug */,
+				2D5700CC2A23844300C5EA65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D5700CD2A23844300C5EA65 /* Build configuration list for PBXNativeTarget "ATCSimulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D5700CE2A23844300C5EA65 /* Debug */,
+				2D5700CF2A23844300C5EA65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D5700D02A23844300C5EA65 /* Build configuration list for PBXNativeTarget "ATCSimulatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D5700D12A23844300C5EA65 /* Debug */,
+				2D5700D22A23844300C5EA65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D5700D32A23844300C5EA65 /* Build configuration list for PBXNativeTarget "ATCSimulatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D5700D42A23844300C5EA65 /* Debug */,
+				2D5700D52A23844300C5EA65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2D57009A2A23843E00C5EA65 /* Project object */;
+}
