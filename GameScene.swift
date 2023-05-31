@@ -9,83 +9,80 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
-    
-    private var label : SKLabelNode?
-    private var spinnyNode : SKShapeNode?
+    var aircraftNodes: [SKShapeNode] = []
+    var numberOfAircraft: Int = 8
+    var movementSpeed: CGFloat = 1.0 // Pixels per second
     
     override func didMove(to view: SKView) {
+        let aircraftSize = CGSize(width: 10, height: 10)
+        //        let spacing: CGFloat = 100
         
-        // Get label node from scene and store it for use later
-        self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
-        if let label = self.label {
-            label.alpha = 0.0
-            label.run(SKAction.fadeIn(withDuration: 2.0))
-        }
-        
-        // Create shape node to use during mouse interaction
-        let w = (self.size.width + self.size.height) * 0.05
-        self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
-        
-        if let spinnyNode = self.spinnyNode {
-            spinnyNode.lineWidth = 2.5
+        for i in 0..<numberOfAircraft {
+            let aircraftNode = SKShapeNode(rectOf: aircraftSize)
+            //            aircraftNode.fillColor = .white
+            // Set random initial position
+            let randomX = CGFloat.random(in: 0...(frame.width - aircraftSize.width))
+            let randomY = CGFloat.random(in: 0...(frame.height - aircraftSize.height))
+            aircraftNode.position = CGPoint(x: randomX, y: randomY)
             
-            spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
-            spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
-                                              SKAction.fadeOut(withDuration: 0.5),
-                                              SKAction.removeFromParent()]))
+            // Add number label
+            let labelNode = SKLabelNode(text: "\(i+1)")
+            labelNode.position = CGPoint(x: aircraftNode.position.x, y: aircraftNode.position.y - 30)
+            addChild(labelNode)
+            
+            addChild(aircraftNode)
+            aircraftNodes.append(aircraftNode)
         }
     }
     
-    
-    func touchDown(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.green
-            self.addChild(n)
-        }
-    }
-    
-    func touchMoved(toPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.blue
-            self.addChild(n)
-        }
-    }
-    
-    func touchUp(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.red
-            self.addChild(n)
-        }
-    }
-    
-    override func mouseDown(with event: NSEvent) {
-        self.touchDown(atPoint: event.location(in: self))
-    }
-    
-    override func mouseDragged(with event: NSEvent) {
-        self.touchMoved(toPoint: event.location(in: self))
-    }
-    
-    override func mouseUp(with event: NSEvent) {
-        self.touchUp(atPoint: event.location(in: self))
-    }
-    
-    override func keyDown(with event: NSEvent) {
-        switch event.keyCode {
-        case 0x31:
-            if let label = self.label {
-                label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
-            }
-        default:
-            print("keyDown: \(event.characters!) keyCode: \(event.keyCode)")
-        }
-    }
-    
+    //    override func update(_ currentTime: TimeInterval) {
+    //        //        let deltaTime = CGFloat(self.deltaTime)
+    //
+    //        // Move each aircraft node horizontally
+    //        for aircraftNode in aircraftNodes {
+    //            aircraftNode.position.x += movementSpeed
+    //        }
+    //    }
     
     override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
+        //            let deltaTime = CGFloat(self.deltaTime)
+        
+        // Move each aircraft node towards the center
+        //        for aircraftNode in aircraftNodes {
+        //            let dx = frame.midX - aircraftNode.position.x
+        //            let dy = frame.midY - aircraftNode.position.y
+        //            let distanceToCenter = hypot(dx, dy)
+        //
+        //            // Move towards the center with a speed relative to the distance
+        //            let movementAmount = min(movementSpeed, distanceToCenter)
+        //            let angle = atan2(dy, dx)
+        //            let dxMove = movementAmount * cos(angle)
+        //            let dyMove = movementAmount * sin(angle)
+        //
+        //            aircraftNode.position.x += dxMove
+        //            aircraftNode.position.y += dyMove
+        //
+        //
+        //        }
+        for (index, aircraftNode) in aircraftNodes.enumerated() {
+            let dx = frame.midX - aircraftNode.position.x
+            let dy = frame.midY - aircraftNode.position.y
+            let distanceToCenter = hypot(dx, dy)
+            
+            // Move towards the center with a speed relative to the distance
+            let movementAmount = min(movementSpeed, distanceToCenter)
+            let angle = atan2(dy, dx)
+            let dxMove = movementAmount * cos(angle)
+            let dyMove = movementAmount * sin(angle)
+            
+            aircraftNode.position.x += dxMove
+            aircraftNode.position.y += dyMove
+            
+            // Update label position
+            let labelNode = children[index * 2 + 1] as? SKLabelNode
+            labelNode?.position.x = aircraftNode.position.x
+            labelNode?.position.y = aircraftNode.position.y - 30
+            
+        }
     }
 }
