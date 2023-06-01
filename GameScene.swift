@@ -56,7 +56,10 @@ class GameScene: SKScene {
             aircraftNode.labelNode?.position.x = 25
             aircraftNode.labelNode?.position.y = 25
             
-            aircraftNode.labelNode?.text = "\(aircraftNode.flightCode)\nHeading: \(Int(aircraftNode.currentHeading * 180 / CGFloat.pi))"
+            aircraftNode.labelNode?.text = """
+                \(aircraftNode.flightCode)
+                Heading: \(aircraftNode.currentHeading)
+            """
             
         }
     }
@@ -75,6 +78,20 @@ class GameScene: SKScene {
         aircraftNode.position = CGPoint(x: randomX, y: randomY)
 //        aircraftNode.labelNode?.position = CGPoint(x: aircraftNode.position.x, y: aircraftNode.position.y - 30)
         
+        let directionToCenter = CGPoint(x: center.x - aircraftNode.position.x, y: center.y - aircraftNode.position.y)
+//        aircraftNode.currentHeading = atan2(directionToCenter.y, directionToCenter.x)
+        //headingの計算用に利用する偏角のラジアンを返す。(-π~π)
+        let headDigree = atan2(directionToCenter.y, directionToCenter.x)
+        var Heading:Int = Int(headDigree * 180 / CGFloat.pi)
+        //北を0、南を180としてcurentHeadingに代入する
+        if Heading < 0 {
+            Heading = Int(90 - Heading)
+        }else if Heading > 90 {
+            Heading = Int(360 - (Heading - 90))
+        }else{
+            Heading = Int(90 - Heading)
+        }
+        aircraftNode.currentHeading = Heading
         //コールサインを生成
         let randomFlightNumber = flightNumbers.randomElement() ?? ""
         let randomFlightID = Int.random(in: 10...2000)
@@ -82,16 +99,13 @@ class GameScene: SKScene {
 //        flightLabel.position = CGPoint(x: 25, y: 25)
 //        flightLabel.fontColor = .white
 //        flightLabel.fontSize = 12
-        let flightLabel = SKLabelNode(text: "\(aircraftNode.flightCode)\nHeading: \(Int(aircraftNode.currentHeading * 180 / CGFloat.pi))")
+        let flightLabel = SKLabelNode(text: "\(aircraftNode.flightCode)\nHeading: \(aircraftNode.currentHeading)")
 //        flightLabel.position = CGPoint(x: 25, y: 25)
         flightLabel.fontColor = .white
         flightLabel.fontSize = 12
         aircraftNode.addChild(flightLabel)
         
         aircraftNode.labelNode = flightLabel
-        
-        let directionToCenter = CGPoint(x: center.x - aircraftNode.position.x, y: center.y - aircraftNode.position.y)
-        aircraftNode.currentHeading = atan2(directionToCenter.y, directionToCenter.x)
         
         addChild(aircraftNode)
 //        addChild(aircraftNode.labelNode!)
@@ -103,7 +117,7 @@ class GameScene: SKScene {
 class Aircraft: SKShapeNode {
     var labelNode: SKLabelNode?
     var movementSpeed: CGFloat = 0.5 // Pixels per second
-    var currentHeading: CGFloat = 0.0 // Initial heading towards the center of the screen
+    var currentHeading: Int = 0 // Initial heading towards the center of the screen
     var flightCode: String = ""
     
     var isSelected: Bool = false {
