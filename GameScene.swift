@@ -116,7 +116,7 @@ class GameScene: SKScene {
 
 class Aircraft: SKShapeNode {
     var labelNode: SKLabelNode?
-    var movementSpeed: CGFloat = 0.5 // Pixels per second
+    var movementSpeed: CGFloat = 0.1 // Pixels per second
     var currentHeading: Int = 0 // Initial heading towards the center of the screen
     var flightCode: String = ""
     
